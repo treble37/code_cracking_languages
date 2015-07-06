@@ -17,3 +17,10 @@ func TestDuplicateStringCharacters(t *testing.T) {
 	  t.Fatalf("uniqueString failed")
 	}
 }
+
+func TestReverseString(t *testing.T) {
+  got := reverseString("abcde")
+	if got != "edcba" {
+		t.Fatalf("reverseString fails")
+	}
+}
