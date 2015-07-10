@@ -24,3 +24,21 @@ func TestReverseString(t *testing.T) {
 		t.Fatalf("reverseString fails")
 	}
 }
+
+func TestRemoveDuplicateChars(t *testing.T) {
+  got := removeDuplicateChars("abbcde")
+	if got != "abcde" {
+		t.Fatalf("removeDuplicateChars fails")
+	}
+	got = removeDuplicateChars("abcabcde")
+	if got != "abcde" {
+		t.Fatalf("removeDuplicateChars fails")
+	}
+}
+
+func TestIsAnagram(t *testing.T) {
+  got := isAnagram("abba")
+	if got != true {
+		t.Fatalf("isAnagram fails")
+	}
+}
