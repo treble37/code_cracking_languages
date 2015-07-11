@@ -61,3 +61,19 @@ func isAnagram(s string) bool {
 	}
 	return flag
 }
+
+//1.5
+
+func replaceSpaces(s string) string {
+	var (
+		replaceStr = ""
+	)
+	for _, r := range s {
+	  if string(r)==" " {
+		   replaceStr = replaceStr + "%20" 
+		} else {
+		  replaceStr = replaceStr + string(r)
+		}
+	}
+	return replaceStr
+}

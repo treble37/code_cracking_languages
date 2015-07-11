@@ -41,4 +41,19 @@ func TestIsAnagram(t *testing.T) {
 	if got != true {
 		t.Fatalf("isAnagram fails")
 	}
+	got = isAnagram("cdex")
+	if got != false {
+		t.Fatalf("isAnagram fails")
+	}
+}
+
+func TestReplaceSpaces(t *testing.T) {
+	got := replaceSpaces("ab cd ef")
+	if got != "ab%20cd%20ef" {
+	  t.Fatalf("replaceSpaces fails")
+	}
+	got = replaceSpaces("abcd")
+	if got != "abcd" {
+		t.Fatalf("replaceSpaces fails")
+	}
 }
