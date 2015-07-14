@@ -69,11 +69,17 @@ func replaceSpaces(s string) string {
 		replaceStr = ""
 	)
 	for _, r := range s {
-	  if string(r)==" " {
-		   replaceStr = replaceStr + "%20" 
+		if string(r) == " " {
+			replaceStr = replaceStr + "%20"
 		} else {
-		  replaceStr = replaceStr + string(r)
+			replaceStr = replaceStr + string(r)
 		}
 	}
 	return replaceStr
+}
+
+//1.7
+
+func zeroReplaceMatrix(mat [][]int, rows, cols, a, b int) {
+
 }
