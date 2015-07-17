@@ -79,7 +79,30 @@ func replaceSpaces(s string) string {
 }
 
 //1.7
+type Matrix [][]int
 
-func zeroReplaceMatrix(mat [][]int, rows, cols, a, b int) {
-
+func zeroReplaceMatrix(mat Matrix) Matrix {
+	var (
+		zero_row int = 0
+		zero_col int = 0
+	)
+	for row, i := range mat {
+		for col, elem := range i {
+			if elem == 0 {
+				zero_row = row
+				zero_col = col
+			}
+		}
+		for r, w := range mat {
+			for s, _ := range w {
+				if r == zero_row {
+					mat[r][s] = 0
+				}
+				if s == zero_col {
+					mat[r][s] = 0
+				}
+			}
+		}
+	}
+	return mat
 }

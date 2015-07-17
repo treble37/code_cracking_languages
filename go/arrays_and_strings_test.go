@@ -59,20 +59,15 @@ func TestReplaceSpaces(t *testing.T) {
 }
 
 func TestZeroReplaceMatrix(t *testing.T) {
-	var mat [3][3]int
-	for i := 0; i < 3; i++ {
-		for j := 0; j < 3; i++ {
-			mat[i][j] = 1
-		}
-	}
-	got := zeroReplaceMatrix(mat[:][:], 3, 3, 0, 1)
+	mat := Matrix{{1, 0, 4}, {2, 5, 6}}
+	got := zeroReplaceMatrix(mat)
 	var check bool = true
-	for i := 0; i < 3; i++ {
-		for j := 0; j < 3; j++ {
-			if i == 0 && got[i][j] != 0 {
+	for row, i := range got {
+		for col, elem := range i {
+			if row == 0 && elem != 0 {
 				check = false
 			}
-			if j == 1 && got[i][j] != 0 {
+			if col == 1 && elem != 0 {
 				check = false
 			}
 		}
