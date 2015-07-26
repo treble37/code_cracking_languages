@@ -23,3 +23,16 @@ func TestRemoveDuplicates(t *testing.T) {
 		t.Fatalf("removeDuplicates failed")
 	}
 }
+
+func TestNthToLastElement(t *testing.T) {
+	testMap := make([]int, 10)
+
+	for i:=1; i<=10; i++ {
+		testMap = append(testMap[0:], i)
+	}
+	e := nthToLastElement(2, testMap[0:])
+  if e!=8 {
+	  t.Fatalf("nthToLastElement failed")
+	}
+
+}

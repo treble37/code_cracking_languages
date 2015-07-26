@@ -5,6 +5,11 @@ import (
 	"fmt"
 )
 
+func nthToLastElement(i int, emap []int) int {
+  m := len(emap)
+	return emap[m-i-1]
+}
+
 func removeDuplicates(l *list.List) *list.List {
 	var newList = list.New()
 	var n map[int]bool = make(map[int]bool)
